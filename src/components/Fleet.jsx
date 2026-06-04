@@ -6,11 +6,11 @@ import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight, Users, Sparkles } from "lucide-react";
 
 const vehicles = [
-    { name: "Maruti Suzuki Dzire", capacity: "4 Seater", rate: "₹11/km", image: "/images/maruti-dzire.jpg", tagline: "Elegant, cozy, and perfectly suited for fast city rides." },
-    { name: "Premium Hatchback", capacity: "4 Seater", rate: "₹10/km", image: "/images/hatchback.jpg", tagline: "Economic, nimble, and highly popular for short commutes." },
-    { name: "Utility SUV Ertiga", capacity: "6–7 Seater", rate: "₹13/km", image: "/images/suv.jpg", tagline: "Deep legroom, solid power, and amazing for family outstation travel." },
-    { name: "Innova Crysta", capacity: "7 Seater", rate: "₹16/km", image: "/images/Innova-Crysta.jpg", tagline: "Luxury touring, soft leather seats, premium suspension." },
-    { name: "Tempo Traveller", capacity: "12 Seater", rate: "₹22/km", image: "/images/travello.jpg", tagline: "Group charter, expansive luggage capacity, great for tours." },
+    { name: "Maruti Suzuki Dzire", capacity: "4 Seater", rate: "₹12/km", image: "/images/maruti-dzire.jpg", tagline: "Elegant, cozy, and perfectly suited for outstation travel and tours." },
+    { name: "Premium Hatchback", capacity: "4 Seater", rate: "₹11/km", image: "/images/hatchback.jpg", tagline: "Economic, nimble, and highly popular for short commutes." },
+    { name: "Utility SUV Ertiga", capacity: "6–7 Seater", rate: "₹15/km", image: "/images/suv.jpg", tagline: "Deep legroom, solid power, and amazing for family outstation travel." },
+    { name: "Innova Crysta", capacity: "7 Seater", rate: "₹18/km", image: "/images/Innova-Crysta.jpg", tagline: "Luxury touring, soft leather seats, premium suspension." },
+    { name: "Tempo Traveller", capacity: "12 Seater", rate: "₹24/km", image: "/images/travello.jpg", tagline: "Group charter, expansive luggage capacity, great for tours." },
 ];
 
 const Fleet = () => {
@@ -74,6 +74,7 @@ const Fleet = () => {
                                     <img
                                         src={vehicle.image}
                                         alt={vehicle.name}
+                                        referrerPolicy="no-referrer"
                                         className="w-full h-44 sm:h-56 lg:h-60 object-cover"
                                     />
                                     {/* Capacity Badge */}
@@ -118,12 +119,13 @@ const Fleet = () => {
                 </div>
 
                 {/* Foot indicators and overview of pricing bar */}
-                <div className="mt-8 bg-slate-100 border border-slate-200 rounded-xl max-w-2xl mx-auto flex items-center justify-around p-4 overflow-x-auto gap-4">
-                    <span className="text-xs uppercase font-extrabold text-slate-400 tracking-wider shrink-0">Quick Rates Table:</span>
+                <div className="mt-8 bg-slate-100 border border-slate-200 rounded-xl max-w-2xl mx-auto flex flex-col sm:flex-row items-center justify-around p-4 overflow-x-auto gap-4">
+                    <span className="text-xs uppercase font-extrabold text-slate-500 tracking-wider shrink-0">Quick Rates (Min. 300km/Day):</span>
                     <div className="flex items-center gap-6 divide-x divide-slate-200 overflow-x-auto text-xs shrink-0 font-semibold text-slate-700">
-                        <span className="pl-4">Sedan: <strong className="text-slate-900 font-bold">11/km</strong></span>
-                        <span className="pl-4">Hatchback: <strong className="text-slate-900 font-bold">10/km</strong></span>
-                        <span className="pl-4">SUV Class: <strong className="text-slate-900 font-bold">13/km</strong></span>
+                        <span className="pl-4">Sedan: <strong className="text-slate-900 font-bold">₹12/km</strong></span>
+                        <span className="pl-4">Hatchback: <strong className="text-slate-900 font-bold">₹11/km</strong></span>
+                        <span className="pl-4">SUV Class: <strong className="text-slate-900 font-bold">₹15/km</strong></span>
+                        <span className="pl-4">Innova: <strong className="text-slate-900 font-bold">₹18/km</strong></span>
                     </div>
                 </div>
 

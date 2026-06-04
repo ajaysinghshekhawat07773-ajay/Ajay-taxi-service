@@ -13,9 +13,10 @@ const Hero = () => {
             {/* Background Image with Dark Professional Overlay */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/backround.jpg"
-                    alt="Background"
-                    className="w-full h-full object-cover object-center opacity-30 scale-102 filter brightness-75"
+                    src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1920&q=82"
+                    alt="Scenic Rajasthan Heritage Fort dusk"
+                    referrerPolicy="no-referrer"
+                    className="w-full h-full object-cover object-center opacity-[0.24] scale-102 filter brightness-75 bg-slate-950"
                 />
                 {/* Visual grid pattern */}
                 <div 

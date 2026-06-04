@@ -22,45 +22,48 @@ const Pricing = () => {
             </div>
 
             {/* Pricing Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                 {[
                     {
-                        title: "City Rides",
-                        price: "₹11–14",
+                        title: "Prime Sedan (Dzire / Etios)",
+                        price: "₹12",
                         unit: "per kilometer",
-                        note: "Minimum base fare applies",
+                        note: "Min. outstation run: 300 km/day",
                         description:
-                            "Perfect for rapid inner-city navigation, restaurant transfers, and quick office meetings inside Sikar.",
+                            "The perfect balance of efficiency and premium comfort. Highly reliable and recommended sedan for families or dynamic executive trips.",
                         features: [
-                            "Zero peak-hour multiplier",
-                            "Free luggage containment",
-                            "Trained and courteous handlers"
+                            "Minimum billing: ₹3,600 per day",
+                            "All-inclusive clean AC passenger cabin",
+                            "Double baggage trunk storage capacity",
+                            "Expert long-distance highway drivers"
                         ]
                     },
                     {
-                        title: "Outstation Trips",
-                        price: "₹12–18",
+                        title: "Utility SUV (Ertiga / Bolero)",
+                        price: "₹15",
                         unit: "per kilometer",
-                        note: "Tolls & parking extra",
+                        note: "Min. outstation run: 300 km/day",
                         description:
-                            "Relaxed long-distance tours across Rajasthan. Pristine cabins equipped with cooling and comfortable seats.",
+                            "Provides expansive headroom, heavy-duty road performance, and excellent suspension. Best suited for medium families and group getaways.",
                         features: [
-                            "All Rajasthan destinations",
-                            "Overnight travel allowed",
-                            "Flexible multi-stop itineraries"
+                            "Minimum billing: ₹4,500 per day",
+                            "6 to 7 passengers comfortable seating",
+                            "Superb air conditioning for hot days",
+                            "Hassle-free multi-stop itinerary support"
                         ]
                     },
                     {
-                        title: "Airport Transfers",
-                        price: "Fixed",
-                        unit: "custom flat rates",
-                        note: "Enquire via WhatsApp",
+                        title: "Premium SUV (Innova Crysta)",
+                        price: "₹18",
+                        unit: "per kilometer",
+                        note: "Min. outstation run: 300 km/day",
                         description:
-                            "Fully synchronized meet & greet terminal coverage which tracks actual flight arrival coordinates.",
+                            "Experience elite luxury on wheels. Enjoy superior plush leather captain seats, supreme safety, and pristine dual-zone cooling systems.",
                         features: [
-                            "Free delay standby checks",
-                            "Assistance handling baggage",
-                            "Guaranteed schedule safety"
+                            "Minimum billing: ₹5,400 per day",
+                            "7 seater premium executive workspace",
+                            "State-of-the-art shock absorber ride",
+                            "VIP priority traveler safety standard"
                         ]
                     },
                 ].map((plan, idx) => (
@@ -71,16 +74,18 @@ const Pricing = () => {
                         <div className="space-y-6">
                             {/* Card badge */}
                             <div className="text-left">
-                                <h4 className="text-lg font-bold text-slate-900">
+                                <h4 className="text-lg font-black text-slate-900">
                                     {plan.title}
                                 </h4>
-                                <p className="text-xs text-slate-400 font-medium mt-1">{plan.note}</p>
+                                <span className="inline-block bg-zinc-200/60 text-taxi-navy text-[11px] font-bold px-2.5 py-1 rounded-md mt-2">
+                                    {plan.note}
+                                </span>
                             </div>
 
                             {/* Large Price display */}
                             <div className="text-left bg-slate-900 text-white rounded-xl p-5 border-l-4 border-taxi-yellow shadow-inner">
                                 <div className="flex items-baseline gap-1">
-                                    <span className="text-3xl font-black text-taxi-yellow">
+                                    <span className="text-4xl font-black text-taxi-yellow">
                                         {plan.price}
                                     </span>
                                 </div>
@@ -89,7 +94,7 @@ const Pricing = () => {
                                 </div>
                             </div>
 
-                            <p className="text-slate-500 text-sm leading-relaxed text-left">
+                            <p className="text-slate-500 text-sm leading-relaxed text-left font-medium">
                                 {plan.description}
                             </p>
 
@@ -108,9 +113,9 @@ const Pricing = () => {
                         <div className="pt-8">
                             <a
                                 href="#about"
-                                className="w-full text-center py-3.5 bg-slate-900 text-white font-extrabold uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-800 transition-colors inline-block select-none"
+                                className="w-full text-center py-3.5 bg-slate-900 text-white font-extrabold uppercase tracking-widest text-[11px] rounded-xl hover:bg-slate-800 transition-all shadow active:scale-98 inline-block select-none"
                             >
-                                Reserve This Ride
+                                Book This Vehicle
                             </a>
                         </div>
                     </div>
@@ -118,11 +123,14 @@ const Pricing = () => {
             </div>
 
             {/* Quality disclosure */}
-            <div className="max-w-4xl mx-auto mt-12 p-4 bg-yellow-50 border border-yellow-200 rounded-xl flex items-center gap-3">
-                <ShieldAlert className="w-5 h-5 text-taxi-yellow shrink-0" />
-                <p className="text-[11px] text-slate-600 leading-relaxed font-medium">
-                    Important Passenger Note: Booking rates represent general pricing brackets. Flat flight schedules and major cultural tourist tours may involve specific seasonal travel packages. Please connect with our WhatsApp helpline for exact estimates.
-                </p>
+            <div className="max-w-4xl mx-auto mt-12 p-5 bg-taxi-navy text-white rounded-xl flex flex-col sm:flex-row items-center gap-4 border border-slate-800">
+                <div className="text-taxi-yellow shrink-0 text-3xl font-black bg-taxi-yellow/10 p-3 rounded-full">🚖</div>
+                <div className="text-left space-y-1">
+                    <h5 className="text-sm font-extrabold text-taxi-yellow">Important Profitability &amp; Billing Rule</h5>
+                    <p className="text-xs text-slate-300 leading-relaxed font-semibold">
+                        To maintain sustainable operations for our background-verified professional drivers, outstation journeys are subject to a **minimum average running requirement of 300 kilometers per calendar day** (e.g. for a Sedan, billing starts from 300km × ₹12 = ₹3,600 per day). Toll taxes, border state entrance taxes, and local parking fees are charged extra as per actual receipts.
+                    </p>
+                </div>
             </div>
         </section>
     );

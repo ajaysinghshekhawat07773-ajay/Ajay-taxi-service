@@ -1,13 +1,43 @@
 // components/About.jsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CheckCircle2, Navigation, Send } from "lucide-react";
 
 const About = () => {
     const [readMore, setReadMore] = useState(false);
     const [formStatus, setFormStatus] = useState("");
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const handlePrefill = (e) => {
+            const { pickup, drop, vehicle } = e.detail || {};
+            const form = document.querySelector("#about form");
+            if (form) {
+                if (pickup) {
+                    const pickupInput = form.querySelector('input[name="pickup"]');
+                    if (pickupInput) pickupInput.value = pickup;
+                }
+                if (drop) {
+                    const dropInput = form.querySelector('input[name="drop"]');
+                    if (dropInput) dropInput.value = drop;
+                }
+                if (vehicle) {
+                    const vehicleSelect = form.querySelector('select[name="vehicle"]');
+                    if (vehicleSelect) vehicleSelect.value = vehicle;
+                }
+                
+                // Focus on Name input to invite user action
+                const nameInput = form.querySelector('input[name="name"]');
+                if (nameInput) {
+                    nameInput.focus();
+                }
+            }
+        };
+
+        window.addEventListener("prefillBooking", handlePrefill);
+        return () => window.removeEventListener("prefillBooking", handlePrefill);
+    }, []);
 
     const handleReadMore = () => setReadMore(!readMore);
 
