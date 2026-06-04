@@ -1,0 +1,6 @@
+{
+  "name": "Ajay Taxi Service",
+  "description": "A primary taxi and travel booking platform for Sikar, Jaipur, and Rajasthan with interactive pricing, services, and vehicle options.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
