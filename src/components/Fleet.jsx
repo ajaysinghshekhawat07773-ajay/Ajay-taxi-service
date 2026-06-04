@@ -5,12 +5,48 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight, Users, Sparkles } from "lucide-react";
 
+/**
+ * Premium Executive Fleet Assets
+ * Path of high-resolution local vehicle photographs preserved during deployment.
+ * Do not replace these paths with generic external unspash links to guarantee
+ * genuine visual fidelity of the client's actual vehicles as per user feedback.
+ */
 const vehicles = [
-    { name: "Maruti Suzuki Dzire", capacity: "4 Seater", rate: "₹12/km", image: "/images/maruti-dzire.jpg", tagline: "Elegant, cozy, and perfectly suited for outstation travel and tours." },
-    { name: "Premium Hatchback", capacity: "4 Seater", rate: "₹11/km", image: "/images/hatchback.jpg", tagline: "Economic, nimble, and highly popular for short commutes." },
-    { name: "Utility SUV Ertiga", capacity: "6–7 Seater", rate: "₹15/km", image: "/images/suv.jpg", tagline: "Deep legroom, solid power, and amazing for family outstation travel." },
-    { name: "Innova Crysta", capacity: "7 Seater", rate: "₹18/km", image: "/images/Innova-Crysta.jpg", tagline: "Luxury touring, soft leather seats, premium suspension." },
-    { name: "Tempo Traveller", capacity: "12 Seater", rate: "₹24/km", image: "/images/travello.jpg", tagline: "Group charter, expansive luggage capacity, great for tours." },
+    { 
+        name: "Maruti Suzuki Dzire", 
+        capacity: "4 Seater", 
+        rate: "₹12/km", 
+        image: "/images/maruti-dzire.jpg", 
+        tagline: "Elegant, cozy, and perfectly suited for outstation travel and tours." 
+    },
+    { 
+        name: "Premium Hatchback", 
+        capacity: "4 Seater", 
+        rate: "₹11/km", 
+        image: "/images/hatchback.jpg", 
+        tagline: "Economic, nimble, and highly popular for short commutes." 
+    },
+    { 
+        name: "Utility SUV Ertiga", 
+        capacity: "6–7 Seater", 
+        rate: "₹15/km", 
+        image: "/images/suv.jpg", 
+        tagline: "Deep legroom, solid power, and amazing for family outstation travel." 
+    },
+    { 
+        name: "Innova Crysta", 
+        capacity: "7 Seater", 
+        rate: "₹18/km", 
+        image: "/images/Innova-Crysta.jpg", 
+        tagline: "Luxury touring, soft leather seats, premium suspension." 
+    },
+    { 
+        name: "Tempo Traveller", 
+        capacity: "12 Seater", 
+        rate: "₹24/km", 
+        image: "/images/travello.jpg", 
+        tagline: "Group charter, expansive luggage capacity, great for tours." 
+    },
 ];
 
 const Fleet = () => {
@@ -75,7 +111,8 @@ const Fleet = () => {
                                         src={vehicle.image}
                                         alt={vehicle.name}
                                         referrerPolicy="no-referrer"
-                                        className="w-full h-44 sm:h-56 lg:h-60 object-cover"
+                                        loading="lazy"
+                                        className="w-full h-44 sm:h-56 lg:h-60 object-cover select-none transition-all duration-300 hover:scale-105"
                                     />
                                     {/* Capacity Badge */}
                                     <div className="absolute top-3 left-3 bg-slate-900/90 text-white backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5 border border-slate-700">
