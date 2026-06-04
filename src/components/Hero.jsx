@@ -101,7 +101,7 @@ const Hero = () => {
                             </div>
                             <h4 className="font-bold text-white text-base">Safety Guaranteed</h4>
                             <p className="text-xs text-slate-400 mt-1.5 leading-relaxed">
-                                GPS tracked cars. Experienced background-checked chauffeurs. Safe journeys.
+                                GPS tracked Ajay Taxis. Experienced background-checked chauffeurs. Safe journeys.
                             </p>
                         </div>
 

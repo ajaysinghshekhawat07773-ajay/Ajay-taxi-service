@@ -5,46 +5,47 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { ChevronLeft, ChevronRight, Users, Sparkles } from "lucide-react";
 
-/**
- * Premium Executive Fleet Assets
- * Path of high-resolution local vehicle photographs preserved during deployment.
- * Do not replace these paths with generic external unspash links to guarantee
- * genuine visual fidelity of the client's actual vehicles as per user feedback.
- */
+// Import vehicle photographs as Vite static assets for bulletproof bundling
+import marutiDzire from "../../public/images/maruti-dzire.jpg";
+import hatchbackImg from "../../public/images/hatchback.jpg";
+import suvImg from "../../public/images/suv.jpg";
+import innovaCrystaImg from "../../public/images/Innova-Crysta.jpg";
+import travelloImg from "../../public/images/travello.jpg";
+
 const vehicles = [
     { 
         name: "Maruti Suzuki Dzire", 
         capacity: "4 Seater", 
         rate: "₹12/km", 
-        image: "/images/maruti-dzire.jpg", 
+        image: marutiDzire, 
         tagline: "Elegant, cozy, and perfectly suited for outstation travel and tours." 
     },
     { 
         name: "Premium Hatchback", 
         capacity: "4 Seater", 
         rate: "₹11/km", 
-        image: "/images/hatchback.jpg", 
+        image: hatchbackImg, 
         tagline: "Economic, nimble, and highly popular for short commutes." 
     },
     { 
         name: "Utility SUV Ertiga", 
         capacity: "6–7 Seater", 
         rate: "₹15/km", 
-        image: "/images/suv.jpg", 
+        image: suvImg, 
         tagline: "Deep legroom, solid power, and amazing for family outstation travel." 
     },
     { 
         name: "Innova Crysta", 
         capacity: "7 Seater", 
         rate: "₹18/km", 
-        image: "/images/Innova-Crysta.jpg", 
+        image: innovaCrystaImg, 
         tagline: "Luxury touring, soft leather seats, premium suspension." 
     },
     { 
         name: "Tempo Traveller", 
         capacity: "12 Seater", 
         rate: "₹24/km", 
-        image: "/images/travello.jpg", 
+        image: travelloImg, 
         tagline: "Group charter, expansive luggage capacity, great for tours." 
     },
 ];
@@ -65,14 +66,14 @@ const Fleet = () => {
                 {/* Header */}
                 <div className="text-center mb-16 space-y-4">
                     <div className="text-xs uppercase tracking-[0.25em] font-extrabold text-slate-400">
-                        PREMIUM VEHICLES
+                        AJAY TAXI SERVICE
                     </div>
                     <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] tracking-tight">
-                        Our Executive Fleet
+                        Our Ajay Taxi Fleet
                     </h2>
                     <div className="w-16 h-1.5 bg-taxi-yellow mx-auto rounded-full"></div>
                     <p className="text-slate-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-                        Choose from a high-quality selection of cars ranging from sleek business class sedans to heavy-duty touring vans. All maintained to pristine aesthetic and mechanical standards.
+                        Choose from a high-quality selection of premium Ajay Taxi services ranging from sleek business class sedans to heavy-duty touring vans. All maintained to pristine aesthetic and mechanical standards.
                     </p>
                 </div>
 
